@@ -1,17 +1,9 @@
-# js-kata-starter
+# atm-js
 
-Starter project for kata (Node, TypeScript, Jest)
+Write a function that implements an ATM. There are 500€, 200€, 100€, 50€, 20€ and 10€ bills.
 
-## Installation
+Here is an example:
 
-```text
-git clone https://github.com/mathieueveillard/js-kata-starter.git
-cd js-kata-starter
-npm install
-```
-
-## Development
-
-```text
-npm test
+```javascript
+atm(270); // [0, 1, 0, 1, 1, 0] -> 1 200€ bill, 1 50€ bill and 1 20€ bill
 ```
