@@ -1,4 +1,4 @@
-import { descending } from "./sort";
+import { descending } from "../util/sort";
 
 export function atm(bills: number[]) {
   const sortedBills = [...bills].sort(descending);
