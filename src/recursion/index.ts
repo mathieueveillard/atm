@@ -1,9 +1,13 @@
 import { descending } from "../util/sort";
 
-export function atm(bills: number[]) {
+export type Bill = 10 | 20 | 50 | 100 | 200 | 500;
+
+type Withdrawal = Partial<Record<Bill, number>>;
+
+export function atm(bills: Bill[]) {
   const sortedBills = [...bills].sort(descending);
 
-  return function (n: number): Record<number, number> {
+  return function (n: number): Withdrawal {
     if (sortedBills.length > 0) {
       const [bill, ...remainingBills] = sortedBills;
       const r = n % bill;
